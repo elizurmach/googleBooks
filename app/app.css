@@ -1,0 +1,155 @@
+/*@import url("https://fonts.googleapis.com/css2?family=Poppins:weight@100;200;300;400;500;600;700;800&display=swap");*/
+
+html, body {
+    min-height: 99vh;
+    width: 98vw;
+}
+
+.main {
+    overflow: auto;
+    max-width: 100%;
+}
+
+footer {
+    background-color: #ddd;
+}
+
+.menu {
+    list-style: none;
+    border-bottom: 0.1em solid black;
+    margin-bottom: 2em;
+    padding: 0 0 0.5em;
+}
+
+    .menu:before {
+        content: "[";
+    }
+
+    .menu:after {
+        content: "]";
+    }
+
+    .menu > li {
+        display: inline;
+    }
+
+        .menu > li + li:before {
+            content: "|";
+            padding-right: 0.3em;
+        }
+
+.search {
+    position: relative;
+    box-shadow: 0 0 40px rgba(51, 51, 51, .1);
+}
+
+    .search input {
+        height: 60px;
+        text-indent: 25px;
+        border: 2px solid #d6d4d4;
+    }
+
+
+        .search input:focus {
+            box-shadow: none;
+            border: 2px solid blue;
+        }
+
+    .search .fa-search {
+        position: absolute;
+        top: 20px;
+        left: 16px;
+    }
+
+    .search button {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        height: 50px;
+        width: 110px;
+        background: blue;
+    }
+
+.pagination-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+    .pagination-container .summary {
+        font-size: 0.5em;
+    }
+
+ul.pagination {
+    align-items: center;
+    justify-content: center;
+}
+
+.data {
+    display: inline-flex;
+}
+
+.card {
+    margin: 1em;
+    height: 70vh;
+    width: calc(70vh * 0.5);
+}
+
+    .card .favorite {
+        position: absolute;
+        top: 0.5em;
+        right: 0.5em;
+    }
+
+    .card .card-img-top {
+        height: 30%;
+        width: 50%;
+        margin: 0 auto;
+        border-radius: calc(.25rem - 1px);
+    }
+
+    .card .btn {
+        position: absolute;
+        bottom: 1em;
+        left: 1em;
+        right: 1em;
+    }
+
+    .card .card-body {
+        font-size: 0.5em;
+    }
+
+        .card .card-body h1 {
+            font-size: 1.5em;
+        }
+
+        .card .card-body h2 {
+            font-size: 1.2em;
+        }
+
+        .card .card-body .card-text {
+            max-height: 20em;
+            overflow-y: auto;
+        }
+
+.book-info {
+    margin: 1em;
+}
+
+    .book-info .left {
+        height: 50vh;
+        width: 50%;
+        float: left;
+        font-size: 0.5em;
+    }
+
+    .book-info .right {
+        height: 50vh;
+        width: 50%;
+        float: right;
+    }
+
+    .book-info .book-img {
+        height: 100%;
+    }

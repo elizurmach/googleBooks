@@ -1,0 +1,21 @@
+<div class="book-info">
+    <div class="left">
+        <h1>{{item.volumeInfo.title}}</h1>
+        <h3>
+            {{item.volumeInfo.authors.length > 1 ? 'Authores: ': 'Authore: '}}
+            <span ng-repeat="authore in item.volumeInfo.authors" class="authore-name">{{authore}}</span>
+        </h3>
+        <p>Publisher: {{item.volumeInfo.publisher}}</p>
+        <p>Publish date: {{item.volumeInfo.publishedDate}}</p>
+        <p>Page count: {{item.volumeInfo.pageCount}}</p>
+        <p ng-show="item.volumeInfo.dimensions">
+            dimensions: <span ng-show="item.volumeInfo.dimensions.height">height: {{item.volumeInfo.dimensions.height}}</span>
+            <span ng-show="item.volumeInfo.dimensions.width">width: {{item.volumeInfo.dimensions.width}}</span>
+            <span ng-show="item.volumeInfo.dimensions.thickness">thickness: {{item.volumeInfo.dimensions.thickness}}</span>
+        </p>
+    </div>
+    <div class="right">
+        <img class="book-img" ng-src="{{item.volumeInfo.imageLinks.thumbnail}}" />
+    </div>
+    <p class="description"></p>
+</div>

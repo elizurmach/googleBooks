@@ -1,0 +1,14 @@
+<div class="card">
+    <span ng-click="tougleFavorite(item.id)" class="favorite">
+        <span title="{{isFavorite(item.id)?'Remove from Favorites':'Add to Favorites'}}">
+            <i class="{{isFavorite(item.id)?'bi bi-star-fill':'bi bi-star'}}"></i>
+        </span>
+    </span>
+    <img class="card-img-top" ng-src="{{item.volumeInfo.imageLinks.thumbnail}}" alt="Card image cap">
+    <div class="card-body">
+        <h1 class="card-title">{{item.volumeInfo.title}}</h1>
+        <h2 class="card-title">{{'By: ' + item.volumeInfo.authors[0]}}</h2>
+        <p class="card-text">{{item.volumeInfo.description}}</p>
+        <a href="{{'#!book-info?id=' + item.id}}" class="btn btn-primary">More information</a>
+    </div>
+</div>
